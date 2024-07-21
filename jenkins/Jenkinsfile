@@ -8,6 +8,10 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
     }
+   environment {
+    PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
+    // rest of your environment variables...
+}
     stages {
 
 
