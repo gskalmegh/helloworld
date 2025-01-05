@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -55,4 +55,32 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<!-- Deployment Credentials (settings.xml in ~/.m2/) -->
+	<!-- Ensure your Maven settings.xml has: -->
+	<!--
+    <servers>
+        <server>
+            <id>nexus-releases</id>
+            <username>your-username</username>
+            <password>your-password</password>
+        </server>
+        <server>
+            <id>nexus-snapshots</id>
+            <username>your-username</username>
+            <password>your-password</password>
+        </server>
+    </servers>
+    -->
 </project>
